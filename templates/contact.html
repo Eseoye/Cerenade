@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+        
+        {% block title %}
+        <title>Cerenade Digital/Contact</title>
+        {% endblock %}
+
+        {% block contact_active %}
+        class="active"
+        {% endblock %}
+    
+        {% block content %}
+
+        <html>
+            <head>
+                <style>
+                    body{
+                        background-image:url({{url_for('static', filename='images/cer.jpg')}})
+                    }
+                </style>
+            </head>
+            <body>
+            <section>
+            <div class="bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7 col-md-10 mx-auto">
+                            <h1>We will love to hear from you</span></h1>
+                            <p id="con" class="lead">Contact us today and let our team of professionals help you grow
+                                your business with our innovative implementation of business development strategies and integrated branding. </p>
+                            {% if success %}
+                            <div class="alert alert-success" role="alert">
+                                Your Message has been sent successfully!
+                            </div>
+                            {% endif %}
+                            <form action="contact.html" name="sentmessage" id="contactform" method="POST">
+                                <div class="control-group">
+                                    <div class="form-group floating-label-form-group controls">
+                                        
+                                        <input type="text" class="form-control" placeholder="Name" id="name" name="name" required data validation>
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <div class="form-group floating-label-form-group controls">
+                                        
+                                        <input type="email" class="form-control" placeholder="Email" id="email" name="email" required data validation>
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <div class="form-group floating-label-form-group controls">
+                                        
+                                        <input type="tel" class="form-control" placeholder="Phone Number" id="phone" name="phone" required data validation>
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+
+                                <div class="input-group">
+                                    
+                                    <textarea rows="2" cols="30" class="form-control" placeholder="Message" id="message" name="message" required data validation aria-label="With textarea"></textarea>
+                                </div>
+                                
+                                <br>
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-primary align-items-start"  id="sendmessagebutton">Send</button>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        </body>
+    </html>  
+
+
+        {% endblock %}

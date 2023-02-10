@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+        
+        {% block title %}
+        <title>Cerenade Digital</title>
+        {% endblock %}
+
+        {% block home_active %}
+        class="active"
+        {% endblock %}
+    
+        {% block content %}
+
+        <html>
+        <head>
+            <style>
+                body{
+                    background-image:url({{url_for('static', filename='images/cerenade.jpg')}});
+                    background-color: rgba(0,0,0,.2);
+                    
+                }
+            </style>
+        </head>
+        <body>
+        <section>
+        <div class="bg">
+            <div class="container">
+                <div class="text">
+                    <h1>Welcome to <br><span class="text-primary"> Cerenade Digital</span></h1>
+                    <p class="lead">We have created a system that helps businesses take advantage of the benefits present in the digital marketplace by creating a bridge that links brands to their target audience using traditional and innovative business tools</p>
+                    <h5>We are a Business Development Service provider, offering a unique tailor made integrated branding service to small, medium and large scale businesses within multiple markets</h5> 
+                    
+                    <a href="service.html" class="btn btn-light">Our Services></a>
+            </div>
+        </div>
+    </section>
+    </body>
+      </html>  
+        {% endblock %}
