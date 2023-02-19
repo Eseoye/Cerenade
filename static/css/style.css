@@ -125,3 +125,16 @@ form{
         min-height: 30vh;
     }
 }
+
+
+
+
+
+
+
+/* nonso's additions */
+
+.home-txt{
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow:  0px 0px 80px 40px rgba(0, 0, 0, 0.5);
+}

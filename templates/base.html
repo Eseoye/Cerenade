@@ -26,10 +26,10 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link">Home</a>
+                            <a href="{{ url_for('index') }}" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="service.html" class="nav-link">Services</a>
+                            <a href="{{ url_for('service') }}" class="nav-link">Services</a>
                         </li>
                         <li class="nav-item">
                             <a href="#port" class="nav-link">Portfolio</a>
@@ -42,7 +42,7 @@
             </div>
         </nav>
 
-        <div class="container-fluid">
+        <div class="container-fluid p-0">
             {% block content %}  {% endblock %}
         </div>
 
